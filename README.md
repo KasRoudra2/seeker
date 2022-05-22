@@ -102,27 +102,15 @@ Available Templates :
 ### Kali Linux / Arch Linux / Ubuntu / Parrot OS / Termux
 
 ```bash
-git clone https://github.com/thewhiteh4t/seeker.git
+git clone https://github.com/kasroudra2/seeker.git
 cd seeker/
 chmod +x install.sh
 ./install.sh
 ```
 
-### BlackArch Linux
-
-```bash
-sudo pacman -S seeker
-```
-
-### Docker
-
-```bash
-docker pull thewhiteh4t/seeker
-```
-
 ### OSX
 ```bash
-git clone https://github.com/thewhiteh4t/seeker.git
+git clone https://github.com/kasroudra2/seeker.git
 cd seeker/
 python3 seeker.py
 ````
@@ -170,26 +158,6 @@ $ python3 seeker.py -p 1337
 # Use Cloudflared 
 $ python3 seeker.py -t 1
 
-################
-# Docker Usage #
-################
-
-# Step 1
-$ docker network create ngroknet
-
-# Step 2
-$ docker run --rm -it --net ngroknet --name seeker thewhiteh4t/seeker
-
-# Step 3
-$ docker run --rm -it --net ngroknet --name ngrok wernight/ngrok ngrok http seeker:8080
-```
-
-## Local Tunnels
-Use
-```
-ssh -R 80:localhost:8080 nokey@localhost.run
-```
-as an alterntive to ngrok
 
 ## Demo
 
