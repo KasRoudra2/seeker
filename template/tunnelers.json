@@ -1,0 +1,14 @@
+{
+    "tunnelers": [
+        {
+            "name": "ngrok",
+            "module": true,
+            "import_file": "mod_ngrok"
+        },
+        {
+            "name": "cloudflared",
+            "module": true,
+            "import_file": "mod_cloudflared"
+        }
+    ]
+}
