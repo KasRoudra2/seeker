@@ -12,6 +12,9 @@
     <a href="https://thewhiteh4t.github.io/">
       <img src="https://img.shields.io/badge/-BLOG-black?logo=dialogflow&style=for-the-badge">
     </a>
+    <a href="https://kasroudra.github.io/">
+      <img src="https://img.shields.io/badge/-PORTFOLIO-black?logo=dialogflow&style=for-the-badge">
+    </a>
 </p>
 
 <p align="center">
@@ -124,23 +127,25 @@ cd seeker/
 python3 seeker.py
 ````
 
-In order to run in tunnel mode, install ngrok by running this command in the terminal:
-```bash
-brew install ngrok/ngrok/ngrok
+### Features ( Added by [KasRoudra](https://github.com/KasRoudra))
+ - Ngrok tunneler
+ - Cloudflared tunneler
+ - Two new argumengs, one for template, one for tunneler
 
-ngrok http 8080
-````
 
 ## Usage
 
 ```bash
-python3 seeker.py -h
-
-usage: seeker.py [-h] [-k KML] [-p PORT] [-u] [-v]
+usage: seeker.py [-h] [-k KML] [-t TUNNELER] [-o OPTION] [-p PORT]
+                 [-u] [-v]
 
 options:
   -h, --help            show this help message and exit
   -k KML, --kml KML     KML filename
+  -t TUNNELER, --tunneler TUNNELER
+                        Index of the tunneler
+  -o OPTION, --option OPTION
+                        Index of the template
   -p PORT, --port PORT  Web server port [ Default : 8080 ]
   -u, --update          Check for updates
   -v, --version         Prints version
@@ -152,9 +157,6 @@ options:
 # Step 1 : In first terminal
 $ python3 seeker.py
 
-# Step 2 : In second terminal start a tunnel service such as ngrok
-$ ./ngrok http 8080
-
 ###########
 # Options #
 ###########
@@ -163,8 +165,10 @@ $ ./ngrok http 8080
 $ python3 seeker.py -k <filename>
 
 # Use Custom Port
-$ python3 seeker.py -p 1337
-$ ./ngrok http 1337
+$ python3 seeker.py -p 1337 
+
+# Use Cloudflared 
+$ python3 seeker.py -t 1
 
 ################
 # Docker Usage #
